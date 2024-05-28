@@ -31,11 +31,11 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           NavigationDestination(
             icon: Badge(child: Icon(Icons.notifications_sharp)),
-            label: 'Perfil',
+            label: 'Bibilioteca',
           ),
           NavigationDestination(
             icon: Badge(child: Icon(Icons.notifications_sharp)),
-            label: 'Correo',
+            label: 'Perfil',
           ),
           NavigationDestination(
             icon: Badge(
@@ -57,8 +57,15 @@ class _MyHomePageState extends State<MyHomePage> {
               Card(
                 child: ListTile(
                   leading: Icon(Icons.notifications_sharp),
-                  title: Text('Notificaciones'),
-                  subtitle: Text('tienes una nueva notificación'),
+                  title: Text('Biblioteca de juegos'),
+                  subtitle: Text('tienes un nuevo juego agregado'),
+                ),
+              ),
+              Card(
+                child: ListTile(
+                  leading: Icon(Icons.notifications_sharp),
+                  title: Text('GTA V'),
+                  
                 ),
               ),
               ],
@@ -97,6 +104,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Container(
                   margin: const EdgeInsets.all(8.0),
                   padding: const EdgeInsets.all(8.0),
+                  
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8.0),
                   ),
