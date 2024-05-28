@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:crud/models/categoria.dart';
 import 'package:crud/models/correo.dart';
-//import 'package:crud/views/categoria/categoria_detail_page.dart';
+import 'package:crud/views/categoria/categoria_detail_page.dart';
 import 'package:crud/views/categoria/categoria_form_page.dart';
 import 'package:crud/views/categoria/categoria_list_view.dart';
 import 'package:crud/views/correo/correo_detail_page.dart';
@@ -51,6 +51,13 @@ final appRouter = GoRouter(
     GoRoute(
       path: '/correo',
       builder: (context, state) => const CorreoListView(),
+    ),
+    GoRoute(
+      path: '/correo/:correo',
+      builder: (context, state) {
+        final id = int.parse(state.pathParameters['id']!);
+        return CorreoDetailPage(id: id);
+      },
     ),
   ],
   errorBuilder: (context, state) => Scaffold(

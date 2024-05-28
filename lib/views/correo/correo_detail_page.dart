@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:crud/models/correo.dart';
 import 'package:crud/services/api_services.dart';
 
-class CategoriaDetailPage extends StatelessWidget {
+class CorreoDetailPage extends StatelessWidget {
   final int id;
 
-  const CategoriaDetailPage({super.key, required this.id});
+  const CorreoDetailPage({super.key, required this.id});
 
   @override
   Widget build(BuildContext context) {
