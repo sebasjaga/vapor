@@ -1,4 +1,5 @@
 import 'package:crud/models/categoria.dart';
+import 'package:crud/models/correo.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
@@ -50,4 +51,14 @@ class ApiService {
   }
 
   //Se crea el FutureList para correo
+  Future<List<Correo>> getCorreos() async {
+    final response = await http.get(Uri.parse('$baseUrl/correos'));
+    if (response.statusCode == 200) {
+      final Map<String, dynamic> body = json.decode(response.body);
+      List<dynamic> correosJson = body['correos'];
+      return correosJson.map((dynamic item) => Correo.fromJson(item)).toList();
+    } else {
+      throw Exception('Failed to load emails');
+    }
+  }
 }
