@@ -61,4 +61,13 @@ class ApiService {
       throw Exception('Failed to load emails');
     }
   }
+
+  Future<Correo> getCorreo(int id) async {
+    final response = await http.get(Uri.parse('$baseUrl/correo/$id'));
+    if (response.statusCode == 200) {
+      return Correo.fromJson(json.decode(response.body));
+    } else {
+      throw Exception('Failed to load email');
+    }
+  }
 }
