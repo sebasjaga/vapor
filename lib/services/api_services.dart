@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class ApiService {
-  static const String baseUrl = 'http://10.10.17.0/vapor/public/api/v1';
+  static const String baseUrl = 'http://192.168.20.14/vapor/public/api/v1';
 
   Future<List<Categoria>> getCategorias() async {
     final response = await http.get(Uri.parse('$baseUrl/categorias'));

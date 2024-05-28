@@ -3,6 +3,7 @@ import 'package:crud/views/categoria/categoria_list_view.dart';
 // import 'package:memes/config/theme/app_theme.dart';
 
 class MyHomePage extends StatefulWidget {
+  
   const MyHomePage({super.key});
 
   @override
@@ -27,21 +28,26 @@ class _MyHomePageState extends State<MyHomePage> {
           NavigationDestination(
             selectedIcon: Icon(Icons.home),
             icon: Icon(Icons.home_outlined),
-            label: 'Home',
+            label: 'Inicio',
           ),
           NavigationDestination(
             icon: Badge(child: Icon(Icons.notifications_sharp)),
-            label: 'Notifications',
+            label: 'Notificaciones',
+          ),
+          NavigationDestination(
+            icon: Badge(child: Icon(Icons.notifications_sharp)),
+            label: 'Perfil',
           ),
           NavigationDestination(
             icon: Badge(
               label: Text('2'),
               child: Icon(Icons.messenger_sharp),
             ),
-            label: 'Messages',
+            label: 'Mensajes',
           ),
         ],
       ),
+      
       body: <Widget>[
         const CategoriaListView(),
 
@@ -53,8 +59,8 @@ class _MyHomePageState extends State<MyHomePage> {
               Card(
                 child: ListTile(
                   leading: Icon(Icons.notifications_sharp),
-                  title: Text('Notification 1'),
-                  subtitle: Text('This is a notification'),
+                  title: Text('Notificaciones'),
+                  subtitle: Text('tienes una nueva notificación'),
                 ),
               ),
               Card(
@@ -67,7 +73,26 @@ class _MyHomePageState extends State<MyHomePage> {
             ],
           ),
         ),
-
+        /// Perfil Page
+        const Padding(
+          padding: EdgeInsets.all(8.0),
+          child: Column(
+            children: <Widget>[
+              Card(
+                child: ListTile(
+                  leading: Icon(Icons.notifications_sharp),
+                  title: Text('Perfil'),
+                  subtitle: Text('Bienvenido'),
+                ),
+              ),
+              SizedBox(height: 10), // Añadimos un espacio
+              Text(
+                'Este es tu perfil.' ,
+                style: TextStyle(fontSize: 16),
+              ),
+            ],
+          ),
+        ),
         /// Messages page
         ListView.builder(
           reverse: true,
