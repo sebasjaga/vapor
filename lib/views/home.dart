@@ -31,7 +31,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           NavigationDestination(
             icon: Badge(child: Icon(Icons.notifications_sharp)),
-            label: 'Notificaciones',
+            label: 'Correo',
           ),
           NavigationDestination(
             icon: Badge(child: Icon(Icons.notifications_sharp)),
