@@ -41,7 +41,7 @@ class _ProfilePageState extends State<ProfilePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Perfil'),
+        title: Text('Correo'),
       ),
       body: user == null
           ? Center(child: CircularProgressIndicator())

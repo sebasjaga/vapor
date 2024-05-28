@@ -80,7 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
               Card(
                 child: ListTile(
                   leading: Icon(Icons.notifications_sharp),
-                  title: Text('Perfil'),
+                  title: Text('Correo'),
                   subtitle: Text('Bienvenido'),
                 ),
               ),
