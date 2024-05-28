@@ -3,7 +3,6 @@ import 'package:crud/views/categoria/categoria_list_view.dart';
 // import 'package:memes/config/theme/app_theme.dart';
 
 class MyHomePage extends StatefulWidget {
-  
   const MyHomePage({super.key});
 
   @override
@@ -22,7 +21,7 @@ class _MyHomePageState extends State<MyHomePage> {
             currentPageIndex = index;
           });
         },
-        indicatorColor: Colors.amber,
+        indicatorColor: Colors.red,
         selectedIndex: currentPageIndex,
         destinations: const <Widget>[
           NavigationDestination(
@@ -47,7 +46,6 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ],
       ),
-      
       body: <Widget>[
         const CategoriaListView(),
 
@@ -73,6 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ],
           ),
         ),
+
         /// Perfil Page
         const Padding(
           padding: EdgeInsets.all(8.0),
@@ -87,12 +86,13 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               SizedBox(height: 10), // Añadimos un espacio
               Text(
-                'Este es tu perfil.' ,
+                'Este es tu perfil.',
                 style: TextStyle(fontSize: 16),
               ),
             ],
           ),
         ),
+
         /// Messages page
         ListView.builder(
           reverse: true,

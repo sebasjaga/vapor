@@ -48,4 +48,6 @@ class ApiService {
       throw Exception('Failed to update category');
     }
   }
+
+  //Se crea el FutureList para correo
 }
