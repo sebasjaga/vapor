@@ -77,4 +77,9 @@ class ApiService {
       headers: {'Content-Type': 'application/json'},
       body: json.encode(correo.toJson()),
     );
+
+    if (response.statusCode != 200) {
+      throw Exception('Failed to create email');
+    }
+  }
 }
