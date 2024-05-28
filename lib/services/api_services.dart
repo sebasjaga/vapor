@@ -70,4 +70,11 @@ class ApiService {
       throw Exception('Failed to load email');
     }
   }
+
+  Future<void> createCorreo(Correo correo) async{
+    final response = await http.post(
+      Uri.parse('$baseUrl/correo/store'),
+      headers: {'Content-Type': 'application/json'},
+      body: json.encode(correo.toJson()),
+    );
 }
