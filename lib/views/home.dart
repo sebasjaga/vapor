@@ -31,11 +31,11 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           NavigationDestination(
             icon: Badge(child: Icon(Icons.notifications_sharp)),
-            label: 'Correo',
+            label: 'Perfil',
           ),
           NavigationDestination(
             icon: Badge(child: Icon(Icons.notifications_sharp)),
-            label: 'Perfil',
+            label: 'Correo',
           ),
           NavigationDestination(
             icon: Badge(
@@ -61,14 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   subtitle: Text('tienes una nueva notificación'),
                 ),
               ),
-              Card(
-                child: ListTile(
-                  leading: Icon(Icons.notifications_sharp),
-                  title: Text('Notification 2'),
-                  subtitle: Text('This is a notification'),
-                ),
-              ),
-            ],
+              ],
           ),
         ),
 
@@ -108,7 +101,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     borderRadius: BorderRadius.circular(8.0),
                   ),
                   child: const Text(
-                    'Hello',
+                    'Hola, quiero comprar el Hollow Knight!',
                   ),
                 ),
               );
@@ -122,7 +115,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   borderRadius: BorderRadius.circular(8.0),
                 ),
                 child: const Text(
-                  'Hi!',
+                  'Bienvenido soy el bot de Vapor, qué juego quieres comprar?',
                 ),
               ),
             );
