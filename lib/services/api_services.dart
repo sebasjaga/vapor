@@ -71,7 +71,7 @@ class ApiService {
     }
   }
 
-  Future<void> createCorreo(Correo correo) async{
+  Future<void> createCorreo(Correo correo) async {
     final response = await http.post(
       Uri.parse('$baseUrl/correo/store'),
       headers: {'Content-Type': 'application/json'},
@@ -81,5 +81,13 @@ class ApiService {
     if (response.statusCode != 200) {
       throw Exception('Failed to create email');
     }
+  }
+
+  Future<void> updateCorreo(Correo correo) async {
+    final response = await http.post(
+      Uri.parse('$baseUrl/correo/update'),
+      headers: {'Content-Type': 'application/json'},
+      body: json.encode(correo.toJson()),
+    );
   }
 }
